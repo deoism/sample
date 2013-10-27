@@ -15,26 +15,9 @@ directory.Employee = Backbone.Model.extend({
 
 });
 
-
-
-directory.NavigationCollection = Backbone.Collection.extend({
+directory.EmployeeCollection = Backbone.Collection.extend({
 
     model: directory.Employee,
-
-    sync: function(method, model, options) {
-        if (method === "read") {
-            directory.store.findByName(options.data.name, function (data) {
-                options.success(data);
-            });
-        }
-    }
-
-});
-
-
-directory.NavigationCollection = Backbone.Collection.extend({
-
-    model: directory.Navigation,
 
     sync: function(method, model, options) {
         if (method === "read") {
@@ -98,7 +81,7 @@ directory.MemoryStore = function (successCallback, errorCallback) {
             });
         }
     }
-	this.navigation = getJSON('/navmenu.html','myList');
+
     this.employees = [
         {"id": 1, "firstName": "James", "lastName": "King", "managerId": 0, managerName: "", "title": "President and CEO", "department": "Corporate", "cellPhone": "617-000-0001", "officePhone": "781-000-0001", "email": "jking@fakemail.com", "city": "Boston, MA", "pic": "james_king.jpg", "twitterId": "@fakejking", "blog": "http://coenraets.org"},
         {"id": 2, "firstName": "Julie", "lastName": "Taylor", "managerId": 1, managerName: "James King", "title": "VP of Marketing", "department": "Marketing", "cellPhone": "617-000-0002", "officePhone": "781-000-0002", "email": "jtaylor@fakemail.com", "city": "Boston, MA", "pic": "julie_taylor.jpg", "twitterId": "@fakejtaylor", "blog": "http://coenraets.org"},
