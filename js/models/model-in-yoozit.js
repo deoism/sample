@@ -45,9 +45,12 @@ directory.ReportsCollection = Backbone.Collection.extend({
     }
 
 });
-
 directory.MemoryStore = function (successCallback, errorCallback) {
-
+	this.navigation = function(navi, callback){
+		var navUrl = 'navmenu.html';
+		$(this).load('navmenu.html #myList');
+		}
+		
     this.findByName = function (searchKey, callback) {
         var Links = this.Links.filter(function (element) {
             var fullName = element.firstName + " " + element.lastName;
