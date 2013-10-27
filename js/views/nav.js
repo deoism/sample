@@ -1,27 +1,27 @@
-directory.EmployeeListView = Backbone.View.extend({
+directory.NavListView = Backbone.View.extend({
 
     tagName:'ul',
 
-    className:'nav nav-list',
+    className:'myList',
 
     initialize:function () {
         var self = this;
         this.model.on("reset", this.render, this);
-        this.model.on("add", function (employee) {
-            self.$el.append(new directory.EmployeeListItemView({model:employee}).render().el);
+        this.model.on("add", function (Nav) {
+            self.$el.append(new directory.NavListItemView({model:Nav}).render().el);
         });
     },
 
     render:function () {
         this.$el.empty();
-        _.each(this.model.models, function (employee) {
-            this.$el.append(new directory.EmployeeListItemView({model:employee}).render().el);
+        _.each(this.model.models, function (Nav) {
+            this.$el.append(new directory.NavListItemView({model:Nav}).render().el);
         }, this);
         return this;
     }
 });
 
-directory.EmployeeListItemView = Backbone.View.extend({
+directory.NavListItemView = Backbone.View.extend({
 
     tagName:"li",
 
