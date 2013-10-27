@@ -1,4 +1,4 @@
-directory.Employee = Backbone.Model.extend({
+directory.Link = Backbone.Model.extend({
 
     initialize:function () {
         this.reports = new directory.ReportsCollection();
@@ -7,34 +7,20 @@ directory.Employee = Backbone.Model.extend({
 
     sync: function(method, model, options) {
         if (method === "read") {
-            directory.store.findById(parseInt(this.id), function (data) {
+           //json request to go here
+		   
+		    directory.store.findById(parseInt(this.id), function (data) {
                 options.success(data);
             });
+			
         }
     }
-
+ 
 });
 
+directory.LinkCollection = Backbone.Collection.extend({
 
-
-directory.NavigationCollection = Backbone.Collection.extend({
-
-    model: directory.Employee,
-
-    sync: function(method, model, options) {
-        if (method === "read") {
-            directory.store.findByName(options.data.name, function (data) {
-                options.success(data);
-            });
-        }
-    }
-
-});
-
-
-directory.NavigationCollection = Backbone.Collection.extend({
-
-    model: directory.Navigation,
+    model: directory.Link,
 
     sync: function(method, model, options) {
         if (method === "read") {
@@ -48,7 +34,7 @@ directory.NavigationCollection = Backbone.Collection.extend({
 
 directory.ReportsCollection = Backbone.Collection.extend({
 
-    model: directory.Employee,
+    model: directory.Link,
 
     sync: function(method, model, options) {
         if (method === "read") {
@@ -63,31 +49,31 @@ directory.ReportsCollection = Backbone.Collection.extend({
 directory.MemoryStore = function (successCallback, errorCallback) {
 
     this.findByName = function (searchKey, callback) {
-        var employees = this.employees.filter(function (element) {
+        var Links = this.Links.filter(function (element) {
             var fullName = element.firstName + " " + element.lastName;
             return fullName.toLowerCase().indexOf(searchKey.toLowerCase()) > -1;
         });
-        callLater(callback, employees);
+        callLater(callback, Links);
     }
 
     this.findByManager = function (managerId, callback) {
-        var employees = this.employees.filter(function (element) {
+        var Links = this.Links.filter(function (element) {
             return managerId === element.managerId;
         });
-        callLater(callback, employees);
+        callLater(callback, Links);
     }
 
     this.findById = function (id, callback) {
-        var employees = this.employees;
-        var employee = null;
-        var l = employees.length;
+        var Links = this.Links;
+        var Link = null;
+        var l = Links.length;
         for (var i = 0; i < l; i++) {
-            if (employees[i].id === id) {
-                employee = employees[i];
+            if (Links[i].id === id) {
+                Link = Links[i];
                 break;
             }
         }
-        callLater(callback, employee);
+        callLater(callback, Link);
     }
 
     // Used to simulate async calls. This is done to provide a consistent interface with stores that use async data access APIs
@@ -98,8 +84,8 @@ directory.MemoryStore = function (successCallback, errorCallback) {
             });
         }
     }
-	this.navigation = getJSON('/navmenu.html','myList');
-    this.employees = [
+
+    this.Links = [
         {"id": 1, "firstName": "James", "lastName": "King", "managerId": 0, managerName: "", "title": "President and CEO", "department": "Corporate", "cellPhone": "617-000-0001", "officePhone": "781-000-0001", "email": "jking@fakemail.com", "city": "Boston, MA", "pic": "james_king.jpg", "twitterId": "@fakejking", "blog": "http://coenraets.org"},
         {"id": 2, "firstName": "Julie", "lastName": "Taylor", "managerId": 1, managerName: "James King", "title": "VP of Marketing", "department": "Marketing", "cellPhone": "617-000-0002", "officePhone": "781-000-0002", "email": "jtaylor@fakemail.com", "city": "Boston, MA", "pic": "julie_taylor.jpg", "twitterId": "@fakejtaylor", "blog": "http://coenraets.org"},
         {"id": 3, "firstName": "Eugene", "lastName": "Lee", "managerId": 1, managerName: "James King", "title": "CFO", "department": "Accounting", "cellPhone": "617-000-0003", "officePhone": "781-000-0003", "email": "elee@fakemail.com", "city": "Boston, MA", "pic": "eugene_lee.jpg", "twitterId": "@fakeelee", "blog": "http://coenraets.org"},
