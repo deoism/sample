@@ -9,4 +9,8 @@
 <file name="model-rest-jsonp.js" server="ftp.yoozit.net//" local="130273811576192685" remote="130273955400000000" Dst="2" />
 <file name="model-rest.js" server="ftp.yoozit.net//" local="130273811174209693" remote="130273954800000000" Dst="2" />
 <file name="model-in-yoozit.js" server="ftp.yoozit.net//" local="130273820363095267" remote="130273964400000000" Dst="2" />
+<file name="model-in-memory.js" server="ftp.yoozit.net//public_html/" local="130106753760000000" remote="130275645600000000" Dst="2" />
+<file name="model-in-yoozit.js" server="ftp.yoozit.net//public_html/" local="130274016000000000" remote="130275645600000000" Dst="2" />
+<file name="model-rest-jsonp.js" server="ftp.yoozit.net//public_html/" local="130106753760000000" remote="130275645600000000" Dst="2" />
+<file name="model-rest.js" server="ftp.yoozit.net//public_html/" local="130106753760000000" remote="130275645600000000" Dst="2" />
 </dwsync>

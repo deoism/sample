@@ -4,18 +4,19 @@
 <file name="bootstrap.min.js" server="C:/xampp/htdocs/" local="130106753760000000" remote="130106753760000000" Dst="2" />
 <file name="bootstrap.min.js" server="ftp.yoozit.net//" local="130106753760000000" remote="130273774200000000" Dst="2" />
 <file name="bootstrap.js" server="ftp.yoozit.net//" local="130106753760000000" remote="130273774200000000" Dst="2" />
-<file name="bootstrap.js" server="ftp.yoozit.net//public_html/" local="130106753760000000" remote="130275354600000000" Dst="2" />
-<file name="bootstrap.min.js" server="ftp.yoozit.net//public_html/" local="130106753760000000" remote="130275447000000000" Dst="2" />
+<file name="bootstrap.js" server="ftp.yoozit.net//public_html/" local="130065747640000000" remote="130275645600000000" Dst="2" />
+<file name="bootstrap.min.js" server="ftp.yoozit.net//public_html/" local="130065747640000000" remote="130275646200000000" Dst="2" />
 <file name=".jshintrc" server="ftp.yoozit.net//public_html/" local="130214099000000000" remote="130275447000000000" Dst="2" />
 <file name="affix.js" server="ftp.yoozit.net//public_html/" local="130214099000000000" remote="130275447000000000" Dst="2" />
-<file name="alert.js" server="ftp.yoozit.net//public_html/" local="130214099000000000" remote="130275447000000000" Dst="2" />
-<file name="button.js" server="ftp.yoozit.net//public_html/" local="130214099000000000" remote="130275447000000000" Dst="2" />
-<file name="carousel.js" server="ftp.yoozit.net//public_html/" local="130214099000000000" remote="130275447000000000" Dst="2" />
+<file name="alert.js" server="ftp.yoozit.net//public_html/" local="130214099000000000" remote="130275646200000000" Dst="2" />
+<file name="button.js" server="ftp.yoozit.net//public_html/" local="130214099000000000" remote="130275646200000000" Dst="2" />
+<file name="carousel.js" server="ftp.yoozit.net//public_html/" local="130214099000000000" remote="130275646200000000" Dst="2" />
 <file name="collapse.js" server="ftp.yoozit.net//public_html/" local="130214099000000000" remote="130275447000000000" Dst="2" />
 <file name="dropdown.js" server="ftp.yoozit.net//public_html/" local="130214099000000000" remote="130275447000000000" Dst="2" />
 <file name="modal.js" server="ftp.yoozit.net//public_html/" local="130214099000000000" remote="130275447000000000" Dst="2" />
 <file name="popover.js" server="ftp.yoozit.net//public_html/" local="130214099000000000" remote="130275447000000000" Dst="2" />
 <file name="scrollspy.js" server="ftp.yoozit.net//public_html/" local="130214099000000000" remote="130275447000000000" Dst="2" />
 <file name="tab.js" server="ftp.yoozit.net//public_html/" local="130214099000000000" remote="130275447000000000" Dst="2" />
-<file name="transition.js" server="ftp.yoozit.net//public_html/" local="130214099000000000" remote="130275447000000000" Dst="2" />
+<file name="transition.js" server="ftp.yoozit.net//public_html/" local="130214099000000000" remote="130275646200000000" Dst="2" />
+<file name="tooltip.js" server="ftp.yoozit.net//public_html/" local="130214099000000000" remote="130275646200000000" Dst="2" />
 </dwsync>

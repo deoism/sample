@@ -8,4 +8,8 @@
 <file name="underscore-min.js" server="ftp.yoozit.net//" local="130106753760000000" remote="130273774800000000" Dst="2" />
 <file name="jquery-1.9.1.min.js" server="ftp.yoozit.net//" local="130106753760000000" remote="130273774800000000" Dst="2" />
 <file name="parse-1.2.2.min.js" server="ftp.yoozit.net//" local="130106753760000000" remote="130273774800000000" Dst="2" />
+<file name="underscore-min.js" server="ftp.yoozit.net//public_html/" local="130106753760000000" remote="130275645600000000" Dst="2" />
+<file name="jquery-1.9.1.min.js" server="ftp.yoozit.net//public_html/" local="130106753760000000" remote="130275645600000000" Dst="2" />
+<file name="backbone-min.js" server="ftp.yoozit.net//public_html/" local="130106753760000000" remote="130275645600000000" Dst="2" />
+<file name="parse-1.2.2.min.js" server="ftp.yoozit.net//public_html/" local="130106753760000000" remote="130275645600000000" Dst="2" />
 </dwsync>
