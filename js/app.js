@@ -2,8 +2,7 @@ var directory = {
 
     views: {},
 
-    models: {},
-
+    models: {}, 
     loadTemplates: function(views, callback) {
 
         var deferreds = [];
@@ -28,7 +27,8 @@ directory.Router = Backbone.Router.extend({
     routes: {
         "":                 "home",
         "contact":          "contact",
-        "employees/:id":    "employeeDetails"
+        "employees/:id":    "employeeDetails",
+        "navigation/:id":    "navigationDetails"
     },
 
     initialize: function () {
@@ -63,6 +63,15 @@ directory.Router = Backbone.Router.extend({
         directory.shellView.selectMenuItem('contact-menu');
     },
 
+    navigation: function () {
+        if (!directory.navigationView) {
+            directory.navigationView = new directory.NavigationView();
+            directory.navigationView.render();
+        }
+        this.$content.html(directory.navigationView.el);
+        directory.shellView.selectMenuItem('contact-menu');
+    },
+
     employeeDetails: function (id) {
         var employee = new directory.Employee({id: id});
         var self = this;
@@ -75,12 +84,26 @@ directory.Router = Backbone.Router.extend({
             }
         });
         directory.shellView.selectMenuItem();
+    },
+
+    navigationDetails: function (id) {
+        var employee = new directory.Navigation({id: id});
+        var self = this;
+        navigation.fetch({
+            success: function (data) {
+                console.log(data);
+                // Note that we could also 'recycle' the same instance of EmployeeFullView
+                // instead of creating new instances
+                self.$content.html(new directory.NavigationView({model: data}).render().el);
+            }
+        });
+        directory.shellView.selectMenuItem();
     }
 
 });
 
 $(document).on("ready", function () {
-    directory.loadTemplates(["HomeView", "ContactView", "ShellView", "EmployeeView", "EmployeeSummaryView", "EmployeeListItemView"],
+    directory.loadTemplates(["HomeView", "ContactView", "NavigationView", "ShellView", "NavigationView", "EmployeeSummaryView", "NavigationSummaryView", "NavigationListItemView"],
         function () {
             directory.router = new directory.Router();
             Backbone.history.start();

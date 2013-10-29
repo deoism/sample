@@ -15,6 +15,37 @@ directory.Employee = Backbone.Model.extend({
 
 });
 
+
+directory.Navigation = Backbone.Model.extend({
+
+    initialize:function () {
+        this.reports = new directory.ReportsCollection();
+        this.reports.parent = this;
+    },
+
+    sync: function(method, model, options) {
+        if (method === "read") {
+            directory.store.findByUrl(parseInt(this.id), function (data) {
+                options.success(data);
+            });
+        }
+    }
+
+});
+		
+directory.NavigationCollection = Backbone.Collection.extend({
+
+    model: directory.Navigation,
+
+    sync: function(method, model, options) {
+        if (method === "read") {
+            directory.store.findByName(options.data.name, function (data) {
+                options.success(data);
+            });
+        }
+    }
+
+});
 directory.EmployeeCollection = Backbone.Collection.extend({
 
     model: directory.Employee,
@@ -36,6 +67,19 @@ directory.ReportsCollection = Backbone.Collection.extend({
     sync: function(method, model, options) {
         if (method === "read") {
             directory.store.findByManager(this.parent.id, function (data) {
+                options.success(data);
+            });
+        }
+    }
+
+});
+directory.ReportsCollection = Backbone.Collection.extend({
+
+    model: directory.Navigation,
+
+    sync: function(method, model, options) {
+        if (method === "read") {
+            directory.store.findByUrl(this.parent.id, function (data) {
                 options.success(data);
             });
         }
@@ -71,6 +115,19 @@ directory.MemoryStore = function (successCallback, errorCallback) {
             }
         }
         callLater(callback, employee);
+    }
+	
+    this.findByUrl= function (id, callback) {
+        var navigation = this.navigation.load('http://www.yoozit.net/navmenu.html #myList');
+        var navlink = null;
+        var l = naivgation.length;
+        for (var i = 0; i < l; i++) {
+            if (navigation[i].id === id) {
+                link = navlink[i];
+                break;
+            }
+        }
+        callLater(callback, naivgation);
     }
 
     // Used to simulate async calls. This is done to provide a consistent interface with stores that use async data access APIs
