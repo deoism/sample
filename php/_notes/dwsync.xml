@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name=".htaccess" server="ftp.yoozit.net//public_html/" local="130106754960000000" remote="130275396000000000" Dst="2" />
-<file name=".travis.yml" server="ftp.yoozit.net//public_html/" local="130106754960000000" remote="130275396000000000" Dst="2" />
-<file name="directory.sql" server="ftp.yoozit.net//public_html/" local="130106754960000000" remote="130275396000000000" Dst="2" />
-<file name="index.php" server="ftp.yoozit.net//public_html/" local="130275283957274751" remote="130275427800000000" Dst="2" />
+<file name=".htaccess" server="ftp.yoozit.net//public_html/" local="130272686200000000" remote="130275697200000000" Dst="2" />
+<file name=".travis.yml" server="ftp.yoozit.net//public_html/" local="130272686200000000" remote="130275697200000000" Dst="2" />
+<file name="directory.sql" server="ftp.yoozit.net//public_html/" local="130106754960000000" remote="130275697200000000" Dst="2" />
+<file name="index.php" server="ftp.yoozit.net//public_html/" local="130272686200000000" remote="130275697200000000" Dst="2" />
+<file name="composer.json" server="ftp.yoozit.net//public_html/" local="130272686200000000" remote="130275697200000000" Dst="2" />
+<file name="CONTRIBUTING.md" server="ftp.yoozit.net//public_html/" local="130272686200000000" remote="130275697200000000" Dst="2" />
+<file name="LICENSE" server="ftp.yoozit.net//public_html/" local="130272686200000000" remote="130275697200000000" Dst="2" />
+<file name="phpunit.xml.dist" server="ftp.yoozit.net//public_html/" local="130272686200000000" remote="130275697200000000" Dst="2" />
+<file name="README.markdown" server="ftp.yoozit.net//public_html/" local="130272686200000000" remote="130275697200000000" Dst="2" />
+<file name="readme.md" server="ftp.yoozit.net//public_html/" local="130275396000000000" remote="130275697200000000" Dst="2" />
+<file name="readme.txt" server="ftp.yoozit.net//public_html/" local="130106754960000000" remote="130275697200000000" Dst="2" />
 </dwsync>
