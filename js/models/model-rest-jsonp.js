@@ -11,8 +11,8 @@
 
 directory.Employee = Backbone.Model.extend({
 
-  //  urlRoot:"http://localhost:3000/employees",
-    urlRoot:"/navmenu.html",
+    urlRoot:"http://localhost:3000/employees",
+//    urlRoot:"/directory-rest-php/employees",
 
     initialize:function () {
         this.reports = new directory.EmployeeCollection();
@@ -25,8 +25,8 @@ directory.EmployeeCollection = Backbone.Collection.extend({
 
     model: directory.Employee,
 
-  //  url:"http://localhost:3000/employees"
-  url:"/navmenu.html"
+    url:"http://localhost:3000/employees"
+//    url:"/directory-rest-php/employees"
 
 });
 
